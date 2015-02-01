@@ -5,10 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset = "utf-8">
         <!-- Bootstrap -->
-        <script src="../js/jquery-2.1.1.js"></script>
-        <script src="../js/bootstrap.js"></script>
-        <link href="../bootstrap/css/bootstrap.css" rel="stylesheet" media="screen" type="text/css">
-
+        <link href="../css/bootstrap.css" rel="stylesheet" type="text/css"/>
+         <!--<script src="../js/jquery-2.1.1.js"></script> -->
+        <!--<script src="../js/bootstrap.js"></script> -->
+        <!--<link href="../bootstrap/css/bootstrap.css" rel="stylesheet" media="screen" type="text/css"> -->
+        
     </head>
     <body class="jumbotron">
         <div class="col-md-1 col-sm-1"></div> <!-- coluna de largura 1 -->
