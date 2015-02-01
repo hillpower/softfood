@@ -2,7 +2,7 @@
 
 $servidor = "localhost";
 $usuario = "root";
-$senha = "123456";
+$senha = "12345";
 $bd = "sistema softfood";
 
 
