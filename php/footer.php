@@ -6,4 +6,7 @@
         <li><a href="#">Fale Conosco</a></li>
     </ul>
 
+    <ul class="nav nav-center">
+        <li>© SoftFood - 2015 Thiago Moraes. Todos os direitos reservados.</li>
+    </ul>
 </div>

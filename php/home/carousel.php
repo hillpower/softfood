@@ -7,7 +7,7 @@
     </ol>
 
     <!-- Wrapper for slides -->
-    <p >Os melhores</p>
+    <p> SoftFood - Comida ao alcance das sua mãos.</p>
     <div class="carousel-inner">
         <div class="item active">
             <img class="" src="../img/imgs home/bigstock-Fast-Food-Icon-Set-3736825-900x500.jpg" alt="...">
