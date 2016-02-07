@@ -3,6 +3,7 @@
     <head>
         <title>Projeto Softfood</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <meta charset = "utf-8">
         <!-- Bootstrap -->
         <link href='http://fonts.googleapis.com/css?family=Frijole' rel='stylesheet' type='text/css'>
@@ -23,7 +24,7 @@
         </div>
 
         <div class="col-md-1 col-sm-1"></div>
-        <div class="col-md-12 col-sm-1"style="text-align: center; color: #6666ff; font-family: 'Frijole', cursive;"><h2>Escolha como deseja fazer seu pedido ?</h2> </div>
+        <div class="col-md-12 col-sm-1"style="text-align: center ; color: #6666ff; font-family: 'Frijole', cursive;"><h2>Escolha como deseja fazer seu pedido ?</h2> </div>
         <div class="container-fluid" style="margin-bottom: 200px; padding-top:200px">
 
             <div class="col-md-3 col-sm-1"></div>
@@ -52,7 +53,7 @@
         <div class="col-md-2"></div>
         <!-- Button trigger modal -->
 
-
+		<!-- Cadrastro de um novo cliente -->
         <!-- Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -94,43 +95,57 @@
                                 </div>
                             </form>
 
+                        </div>
+						
+						
+                        <div class="container">
+							<hr>
+                            <h4 class="modal-title" style="text-align: left">Cadastrar Novo Usuário</h4>
+							<hr>
+						</div>
+						
+						 <!-- Segundo formulario -->
+                         <div class="container">
 
+                            <form class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                                    </div>
+                                </div>
+								    <div class="form-group">
+										<label for="inputPassword3" class="col-sm-2 control-label">Senha</label>
+										<div class="col-sm-10">
+                                        <input type="password" class="form-control" id="inputPassword3" placeholder="Senha">
+                                    </div>
+									</div>
+									<div class="form-group">
+										<label for="inputPassword3" class="col-sm-2 control-label"> <!-- campo da senha --> 	</label>
+										<div class="col-sm-10">
+                                        <input type="password" class="form-control" id="inputPassword3" placeholder="Confirmar Senha">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button type="submit" class="btn btn-default">Cadastrar</button>
+                                    </div>
+                                </div>
+                            </form>
 
                         </div>
-                        <div class="container">
-                            <h4 class="modal-title" style="text-align: left">Cadastrar Novo Usuario</h4>
-
-                        </div><form class="form-inline" role="form"> <!-- Segundo formulario -->
-                            <div class="form-group">
-                                <label for="exampleInputEmail2">Email .</label>
-                                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
-                            </div><p>
-                            <div class="form-group">
-                                <div class="input-group">
-                                   <label for="exampleInputEmail2">confirme email .</label> 
-                                    <div class="input-group-addon">@</div>
-                                    <input class="form-control" type="email" placeholder="Enter email">
-                                </div>
-                            </div><p>
-                            <div class="form-group">
-                                <label for="exampleInputPassword2">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox"> Lembrar-me
-                                </label>
-                            </div>
-                            <button type="submit" class="btn btn-default">Cadastrar</button>
-                        </form>
+                            
+                        
 
 
 
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                        <button type="button" class="btn btn-primary">Enviar</button>
-                    </div>
+                    
                 </div>
             </div>
         </div>

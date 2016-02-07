@@ -1,0 +1,158 @@
+/* efeitos de animação */
+@-webkit-keyframes listras-anim {
+from {background-position:40px 0}
+to {background-position:0 0}
+}
+@-moz-keyframes listras-anim {
+from {background-position:40px 0}
+to {background-position:0 0}
+}
+@-o-keyframes listras-anim {
+from {background-position:40px 0}
+to {background-position:0 0}
+}
+@keyframes listras-anim {
+from {background-position:40px 0}
+to {background-position:0 0}
+}
+
+/*---------------------------------------------------------- */
+
+.progresso.ativa .progresso-barra {
+	-webkit-animation: listras-anim 2s linear infinite;
+	-moz-animation: listras-anim 2s linear infinite;
+	-ms-animation: listras-anim 2s linear infinite;
+	-o-animation: listras-anim 2s linear infinite;
+	animation: listras-anim 2s linear infinite
+}
+/*--------------------------------------------------------- */
+
+.progresso {
+	overflow: hidden;
+	height: 15px;
+	background-color: #e7e7e7;
+	padding: 1px;
+	box-shadow: inset -1px -1px 18px #CECECE, inset 0 -1px 0 #CECECE
+}
+
+/*--------------------------------------------------------- */
+
+.progresso-barra {
+	width: 100%;
+	height: 15px;
+	background-color: #428bca;
+	-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+	box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+	-webkit-transition: width .6s ease;
+	transition: width .6s ease
+}
+
+/*--------------------------75%------------------------------- */
+
+.progresso-pai .progresso-barra {
+	background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255,255,255,.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255,255,255,.15)), color-stop(0.75, rgba(255,255,255,.15)), color-stop(0.75, transparent), to(transparent));
+	background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,.15)25%, transparent 25%, transparent 50%, rgba(255,255,255,.15)50%, rgba(255,255,255,.15)75%, transparent 75%, transparent);
+	background-image: -moz-linear-gradient(45deg, rgba(255,255,255,.15)25%, transparent 25%, transparent 50%, rgba(255,255,255,.15)50%, rgba(255,255,255,.15)75%, transparent 75%, transparent);
+	background-image: linear-gradient(45deg, rgba(255,255,255,.15)25%, transparent 25%, transparent 50%, rgba(255,255,255,.15)50%, rgba(255,255,255,.15)75%, transparent 75%, transparent);
+	background-size: 40px 40px
+}
+
+.progresso-pai .progresso-barra, .progresso-pai .progresso-barra-75 {
+	background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255,255,255,.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255,255,255,.15)), color-stop(0.75, rgba(255,255,255,.15)), color-stop(0.75, transparent), to(transparent));
+	background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,.15)25%, transparent 25%, transparent 50%, rgba(255,255,255,.15)50%, rgba(255,255,255,.15)75%, transparent 75%, transparent);
+	background-image: -moz-linear-gradient(45deg, rgba(255,255,255,.15)25%, transparent 25%, transparent 50%, rgba(255,255,255,.15)50%, rgba(255,255,255,.15)75%, transparent 75%, transparent);
+	background-image: linear-gradient(45deg, rgba(255,255,255,.15)25%, transparent 25%, transparent 50%, rgba(255,255,255,.15)50%, rgba(255,255,255,.15)75%, transparent 75%, transparent);
+	background-size: 40px 40px
+}
+
+.progresso.ativa .progresso-barra, .progresso.ativa .progresso-barra-75 {
+	-webkit-animation: listras-anim 2s linear infinite;
+	-moz-animation: listras-anim 2s linear infinite;
+	-ms-animation: listras-anim 2s linear infinite;
+	-o-animation: listras-anim 2s linear infinite;
+	animation: listras-anim 2s linear infinite
+}
+/**************************fim 75%***************************************/
+
+/*********************************55%************************************/
+.progresso-pai .progresso-barra {
+	background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255,255,255,.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255,255,255,.15)), color-stop(0.75, rgba(255,255,255,.15)), color-stop(0.75, transparent), to(transparent));
+	background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,.15)25%, transparent 25%, transparent 50%, rgba(255,255,255,.15)50%, rgba(255,255,255,.15)75%, transparent 75%, transparent);
+	background-image: -moz-linear-gradient(45deg, rgba(255,255,255,.15)25%, transparent 25%, transparent 50%, rgba(255,255,255,.15)50%, rgba(255,255,255,.15)75%, transparent 75%, transparent);
+	background-image: linear-gradient(45deg, rgba(255,255,255,.15)25%, transparent 25%, transparent 50%, rgba(255,255,255,.15)50%, rgba(255,255,255,.15)75%, transparent 75%, transparent);
+	background-size: 40px 40px
+}
+
+.progresso-pai .progresso-barra, .progresso-pai .progresso-barra-55 {
+	background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255,255,255,.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255,255,255,.15)), color-stop(0.75, rgba(255,255,255,.15)), color-stop(0.75, transparent), to(transparent));
+	background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,.15)25%, transparent 25%, transparent 50%, rgba(255,255,255,.15)50%, rgba(255,255,255,.15)75%, transparent 75%, transparent);
+	background-image: -moz-linear-gradient(45deg, rgba(255,255,255,.15)25%, transparent 25%, transparent 50%, rgba(255,255,255,.15)50%, rgba(255,255,255,.15)75%, transparent 75%, transparent);
+	background-image: linear-gradient(45deg, rgba(255,255,255,.15)25%, transparent 25%, transparent 50%, rgba(255,255,255,.15)50%, rgba(255,255,255,.15)75%, transparent 75%, transparent);
+	background-size: 40px 40px
+}
+
+.progresso.ativa .progresso-barra, .progresso.ativa .progresso-barra-55 {
+	-webkit-animation: listras-anim 2s linear infinite;
+	-moz-animation: listras-anim 2s linear infinite;
+	-ms-animation: listras-anim 2s linear infinite;
+	-o-animation: listras-anim 2s linear infinite;
+	animation: listras-anim 2s linear infinite
+}
+/********************************fim 55%************************************/
+/***************************************************************************/
+.progresso-pai .progresso-barra {
+	background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255,255,255,.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255,255,255,.15)), color-stop(0.75, rgba(255,255,255,.15)), color-stop(0.75, transparent), to(transparent));
+	background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,.15)25%, transparent 25%, transparent 50%, rgba(255,255,255,.15)50%, rgba(255,255,255,.15)75%, transparent 75%, transparent);
+	background-image: -moz-linear-gradient(45deg, rgba(255,255,255,.15)25%, transparent 25%, transparent 50%, rgba(255,255,255,.15)50%, rgba(255,255,255,.15)75%, transparent 75%, transparent);
+	background-image: linear-gradient(45deg, rgba(255,255,255,.15)25%, transparent 25%, transparent 50%, rgba(255,255,255,.15)50%, rgba(255,255,255,.15)75%, transparent 75%, transparent);
+	background-size: 40px 40px
+}
+
+.progresso-pai .progresso-barra, .progresso-pai .progresso-barra-25 {
+	background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255,255,255,.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255,255,255,.15)), color-stop(0.75, rgba(255,255,255,.15)), color-stop(0.75, transparent), to(transparent));
+	background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,.15)25%, transparent 25%, transparent 50%, rgba(255,255,255,.15)50%, rgba(255,255,255,.15)75%, transparent 75%, transparent);
+	background-image: -moz-linear-gradient(45deg, rgba(255,255,255,.15)25%, transparent 25%, transparent 50%, rgba(255,255,255,.15)50%, rgba(255,255,255,.15)75%, transparent 75%, transparent);
+	background-image: linear-gradient(45deg, rgba(255,255,255,.15)25%, transparent 25%, transparent 50%, rgba(255,255,255,.15)50%, rgba(255,255,255,.15)75%, transparent 75%, transparent);
+	background-size: 40px 40px
+}
+
+.progresso.ativa .progresso-barra, .progresso.ativa .progresso-barra-25 {
+	-webkit-animation: listras-anim 2s linear infinite;
+	-moz-animation: listras-anim 2s linear infinite;
+	-ms-animation: listras-anim 2s linear infinite;
+	-o-animation: listras-anim 2s linear infinite;
+	animation: listras-anim 2s linear infinite
+}
+/*********************************fim 25% *********************************/
+
+.progresso-barra-75 {
+	width: 75%;
+	height: 15px;
+	background-color:#093;
+	-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+	box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+	-webkit-transition: width .6s ease;
+	transition: width .6s ease
+}
+
+.progresso-barra-25 {
+	width: 25%;
+	height: 15px;
+	background-color:#093;
+	-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+	box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+	-webkit-transition: width .6s ease;
+	transition: width .6s ease
+}
+.progresso-barra-55 {
+	width: 55%;
+	height: 15px;
+	background-color:#093;
+	-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+	box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+	-webkit-transition: width .6s ease;
+	transition: width .6s ease
+}
+/*****************************************************************/
+
+

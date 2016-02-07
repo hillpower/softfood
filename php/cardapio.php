@@ -42,11 +42,21 @@
                             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                 <div class="panel-body">
                                     <table class="table table-responsive">
-                                        <tr class="info"><td>Produto</td><td>Descrição</td><td>Preço em Reais</td></tr>
-                                        <tr class="success"><td> Opção 1 </td><td>Descrição</td><td>Preço</td></tr>
-                                        <tr class="success"><td> Opção 2</td><td>Descrição</td><td>Preço</td></tr>
-                                        <tr class="success"><td>Produto</td><td>Descrição</td><td>Preço</td></tr>
-                                        <tr class="success"><td>Produto</td><td>Descrição</td><td>Preço</td></tr>
+                                        <tr class="info"><td>Produto</td><td>Descrição</td><td>Preço em Reais</td><td></td></tr>
+										<?php
+											
+											include "conexao.php";
+											/*$link = mysqli_connect("localhost", "root", "", "softfood"); */
+											$query = "select * from produto";
+												
+											$result = mysqli_query($link, $query);
+											while($row = mysqli_fetch_assoc($result))
+											{
+												echo "<tr class='success'><td>".$row['nome']."</td><td>".$row['descricao']."</td><td>".$row['preco']."</td><td>ADD</td></tr>";
+											}	
+											mysqli_free_result($result);
+											mysqli_close($link);
+										?>
                                     </table>
                                 </div>
                             </div>
