@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: Feb 07, 2016 at 10:04 PM
+-- Generation Time: Feb 07, 2016 at 10:11 PM
 -- Server version: 5.5.41-log
 -- PHP Version: 7.0.0
 
@@ -34,6 +34,30 @@ CREATE TABLE IF NOT EXISTS `produto` (
   `tipoproduto_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tipoproduto`
+--
+
+CREATE TABLE IF NOT EXISTS `tipoproduto` (
+`id` int(11) NOT NULL,
+  `tipo` varchar(40) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `usuario`
+--
+
+CREATE TABLE IF NOT EXISTS `usuario` (
+`id` int(11) NOT NULL,
+  `nome` varchar(40) DEFAULT NULL,
+  `email` varchar(40) DEFAULT NULL,
+  `senha` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
 --
 -- Indexes for dumped tables
 --
@@ -45,6 +69,18 @@ ALTER TABLE `produto`
  ADD PRIMARY KEY (`id`), ADD KEY `fk_tipoproduto` (`tipoproduto_id`);
 
 --
+-- Indexes for table `tipoproduto`
+--
+ALTER TABLE `tipoproduto`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `usuario`
+--
+ALTER TABLE `usuario`
+ ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -52,6 +88,16 @@ ALTER TABLE `produto`
 -- AUTO_INCREMENT for table `produto`
 --
 ALTER TABLE `produto`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `tipoproduto`
+--
+ALTER TABLE `tipoproduto`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `usuario`
+--
+ALTER TABLE `usuario`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- Constraints for dumped tables
