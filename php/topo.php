@@ -16,6 +16,7 @@
                 <li><a href="cardapio.php" style="width: auto">Cardápio</a></li>
                 <li><a href="delivery.php">Delivery</a></li>
                 <li><a href="perguntasfreq.php">Perguntas Frequentes</a></li>
+				<li><a href="carrinho.php">Carrinho</a></li>
             </ul>
         </div>
     </div>

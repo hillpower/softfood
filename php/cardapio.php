@@ -52,7 +52,9 @@
 											$result = mysqli_query($link, $query);
 											while($row = mysqli_fetch_assoc($result))
 											{
-												echo "<tr class='success'><td>".$row['nome']."</td><td>".$row['descricao']."</td><td>".$row['preco']."</td><td>ADD</td></tr>";
+												echo "<tr class='success'><td>".$row['nome']."</td><td>".$row['descricao']."</td><td>".$row['preco']."</td><td>
+												<a href='carrinho.php?acao=add&id=".$row['id']."'>Comprar</a>
+												</td></tr>";
 											}	
 											mysqli_free_result($result);
 											mysqli_close($link);
