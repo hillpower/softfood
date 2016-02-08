@@ -1,3 +1,12 @@
+<?php 
+	session_start();
+	$cont = 0;
+	foreach($_SESSION['carrinho'] as $id => $qtd){
+		$cont += $qtd;
+	}
+	//echo count($_SESSION['carrinho']);
+?>
+
 <nav class="navbar navbar-inverse" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -17,7 +26,7 @@
                 <li><a href="delivery.php">Delivery</a></li>
                 <li><a href="perguntasfreq.php">Perguntas Frequentes</a></li>
 				<li><a href="carrinho.php">Carrinho&nbsp;
-				<span class="badge" style="background-color: #d43f3a;"><?php echo count($_SESSION['carrinho']);?></span></a></li>                            
+				<span class="badge" style="background-color: #d43f3a;"><?php echo $cont;?></span></a></li>                            
             </ul>
         </div>
     </div>
