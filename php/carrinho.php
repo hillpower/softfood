@@ -96,7 +96,7 @@
 														
 						<tr>
 							<td colspan="4"><a href="cardapio.php"><button type="button" class="btn btn-warning">Continuar Comprando</button></a></td>
-							<td colspan="1"><a href="cardapio.php"><button type="button" class="btn btn-primary">Finalizar Pedido</button></a></td>
+							<td colspan="1"><a href="finalizar.php"><button type="button" class="btn btn-primary">Finalizar Pedido</button></a></td>
 							
 			</tfoot>
 			
@@ -135,13 +135,19 @@
                             mysqli_close($link);
 						   $total = number_format($total, 2, ',', '.');
                            echo '<tr>
-                                    <td colspan="4">Total</td>
+                                    <td colspan="4">Total.:</td>
                                     <td class="success"><h4>R$ '.$total.'</h4></td>
                               </tr>';
                      }
                ?>
-    
+				
 			</tbody>
+			<tr>										
+				<td colspan="5" >
+					<label for="comment">Observações:</label>
+					<textarea class="form-control" rows="5" id="obs">Troco para R$ </textarea>
+				</td>										
+			<tr>
         </form>
 		
 			   </table>
