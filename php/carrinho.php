@@ -70,28 +70,34 @@
             <!-- termina a navbar -->
         </div>
 
-	<div class="col-md-12 col-sm-1">
-        
-	<table>
-		<caption>Carrinho de Compras</caption>
-		<thead>
-			  <tr>
-				<th width="244">Produto</th>
-				<th width="79">Quantidade</th>
-				<th width="89">Pre&ccedil;o</th>
-				<th width="100">SubTotal</th>
-				<th width="64">Remover</th>
-			  </tr>
-		</thead>
+	
+	<div class="container-fluid">
+		<div class="col-md-3 col-sm-1"></div>
+			<div class="col-md-8 col-sm-10"><!-- comeca o colapso -->    
+			<hr>
+	
+			<table>
+	
+				
+		    	<thead>
+					<tr>
+						<th width="244">Produto</th>
+						<th width="150">Quantidade</th>
+						<th width="150">Preço <!--&ccedil;o --></th>
+						<th width="150">SubTotal</th>
+						<th width="150">Remover</th>
+					</tr>
+				</thead>
 				<form action="?acao=up" method="post">
-		<tfoot>
-			   <tr>
-				<td colspan="5"><input type="submit" value="Atualizar Carrinho" /></td>
-				<tr>
-				<td colspan="5"><a href="cardapio.php">Continuar Comprando</a></td>
-		</tfoot>
-		  
-		<tbody>
+			
+			<tfoot>
+			    <tr>
+					<td colspan="5"><input type="submit" value="Atualizar Carrinho" /></td>
+					<tr>
+					<td colspan="5"><a href="cardapio.php">Continuar Comprando</a></td>
+			</tfoot>
+		
+			<tbody>
                <?php
                      if(count($_SESSION['carrinho']) == 0){
                         echo '<tr><td colspan="5">Não há produto no carrinho</td></tr>';
@@ -127,16 +133,29 @@
                      }
                ?>
     
-     </tbody>
+			</tbody>
         </form>
-	</table>
-	</div>		
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <?php
-            include './footer.php';
-            ?>
-        </div>
+			</table>
+			<hr>
+			<hr>
+			<hr>
+			<hr>
+			<hr>
+			<hr>
+			<hr>
+			<hr>
+			<hr>
+	</div>
+		</div>
+		
+        
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<?php
+					include './footer.php';
+				?>
+			</div>
+		
 		
     </body>
 </html>
