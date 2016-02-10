@@ -77,8 +77,7 @@
 				<hr>
 	
 				<table class="table table-striped">
-	
-				
+					<caption class="alert alert-info"><h4><strong>Carrinho de Compras</strong></h4></caption>
 					<thead>
 						<tr>
 							<th width="244">Produto</th>
@@ -96,7 +95,8 @@
 							<td colspan="5" ><button type="submit" class="btn btn-primary">Atualizar Carrinho</button></td>
 														
 						<tr>
-							<td colspan="5"><a href="cardapio.php"><button type="button" class="btn btn-warning">Continuar Comprando</button></a></td>
+							<td colspan="4"><a href="cardapio.php"><button type="button" class="btn btn-warning">Continuar Comprando</button></a></td>
+							<td colspan="1"><a href="cardapio.php"><button type="button" class="btn btn-primary">Finalizar Pedido</button></a></td>
 							
 			</tfoot>
 			
