@@ -146,6 +146,7 @@
 				<td colspan="5" >
 					<label for="comment">Observações:</label>
 					<textarea class="form-control" rows="5" id="obs">Troco para R$ </textarea>
+					
 				</td>										
 			<tr>
         </form>
