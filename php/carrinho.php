@@ -72,31 +72,34 @@
 
 	
 	<div class="container-fluid">
-		<div class="col-md-3 col-sm-1"></div>
-			<div class="col-md-8 col-sm-10"><!-- comeca o colapso -->    
-			<hr>
+			<div class="col-md-2 col-sm-1"></div>
+				<div class="col-md-8 col-sm-10"><!-- comeca o colapso -->    
+				<hr>
 	
-			<table>
+				<table class="table table-striped">
 	
 				
-		    	<thead>
-					<tr>
-						<th width="244">Produto</th>
-						<th width="150">Quantidade</th>
-						<th width="150">Preço <!--&ccedil;o --></th>
-						<th width="150">SubTotal</th>
-						<th width="150">Remover</th>
-					</tr>
-				</thead>
+					<thead>
+						<tr>
+							<th width="244">Produto</th>
+							<th width="150">Quantidade</th>
+							<th width="150">Preço <!--&ccedil;o --></th>
+							<th width="150">SubTotal</th>
+							<th width="150">Remover</th>
+						</tr>
+					</thead>
 				<form action="?acao=up" method="post">
 			
 			<tfoot>
-			    <tr>
-					<td colspan="5"><input type="submit" value="Atualizar Carrinho" /></td>
-					<tr>
-					<td colspan="5"><a href="cardapio.php">Continuar Comprando</a></td>
+						<tr>
+														
+							<td colspan="5" ><button type="submit" class="btn btn-primary">Atualizar Carrinho</button></td>
+														
+						<tr>
+							<td colspan="5"><a href="cardapio.php"><button type="button" class="btn btn-warning">Continuar Comprando</button></a></td>
+							
 			</tfoot>
-		
+			
 			<tbody>
                <?php
                      if(count($_SESSION['carrinho']) == 0){
@@ -120,7 +123,12 @@
                                  <td><input type="text" size="3" name="prod['.$id.']" value="'.$qtd.'" /></td>
                                  <td>R$ '.$preco.'</td>
                                  <td>R$ '.$sub.'</td>
-                                 <td><a href="?acao=del&id='.$id.'">Remove</a></td>
+								 
+                                 <td><a href="?acao=del&id='.$id.'"><button type="button" class="btn btn-danger">Remover</button></a></td>
+								 
+								 
+								 
+								 
                               </tr>';
 							mysqli_free_result($result);
                         }
@@ -128,25 +136,22 @@
 						   $total = number_format($total, 2, ',', '.');
                            echo '<tr>
                                     <td colspan="4">Total</td>
-                                    <td>R$ '.$total.'</td>
+                                    <td class="success"><h4>R$ '.$total.'</h4></td>
                               </tr>';
                      }
                ?>
     
 			</tbody>
         </form>
-			</table>
-			<hr>
-			<hr>
-			<hr>
-			<hr>
-			<hr>
-			<hr>
-			<hr>
-			<hr>
-			<hr>
-	</div>
+		
+			   </table>
+			   
+		
+			
+	
 		</div>
+		<div class="col-md-2 col-sm-1"></div>
+	</div>
 		
         
 			<div class="col-md-2"></div>
@@ -155,6 +160,7 @@
 					include './footer.php';
 				?>
 			</div>
+			<div class="col-md-2"></div>
 		
 		
     </body>

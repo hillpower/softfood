@@ -23,9 +23,9 @@
         <div class="col-md-1 col-sm-1"></div>
 
         <div class="container-fluid">
-            <div class="col-md-1 col-sm-1"></div>
+            <div class="col-md-2 col-sm-1"></div>
 
-            <div class="col-md-10 col-sm-10"><!-- comeca o colapso -->
+            <div class="col-md-8 col-sm-10"><!-- comeca o colapso -->
 
                 <div class="container-fluid" id="conteudo">
                     <div class="panel-group" id="accordion" role="tablist">
