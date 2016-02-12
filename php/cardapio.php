@@ -11,7 +11,6 @@
     </head>
     <body class="jumbotron">
         <div class="col-md-1 col-sm-1"></div> <!-- coluna de largura 1 -->
-
         <div class="col-md-10 col-sm-10"><!-- coluna de largura 10 -->
             <!-- comeca a navbar -->
             <?PHP
@@ -19,13 +18,14 @@
             ?>
             <!-- termina a navbar -->
         </div>
-
         <div class="col-md-1 col-sm-1"></div>
+		
+		
 
         <div class="container-fluid">
-            <div class="col-md-2 col-sm-1"></div>
+            <div class="col-md-1 col-sm-1"></div>
 
-            <div class="col-md-8 col-sm-10"><!-- comeca o colapso -->
+            <div class="col-md-10 col-sm-10"><!-- comeca o colapso -->
 
                 <div class="container-fluid" id="conteudo">
                     <div class="panel-group" id="accordion" role="tablist">
@@ -96,37 +96,41 @@
 
                                     </h4>
                                 </a>    
-
                             </div>
-                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                <div class="panel-body">
-                                    <table class="table table-responsive">
-                                        <tr class="info"><td>Produto</td><td>Descrição</td><td>Preço em Reais</td></tr>
-                                        <tr class="danger"><td>Produto</td><td>Descrição</td><td>Preço</td></tr>
-                                        <tr class="success"><td>Produto</td><td>Descrição</td><td>Preço</td></tr>
-                                        <tr class="success"><td>Produto</td><td>Descrição</td><td>Preço</td></tr>
-                                        <tr class="danger"><td>Produto</td><td>Descrição</td><td>Preço</td></tr>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
+									<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+										<div class="panel-body">
+											<table class="table table-responsive">
+												<tr class="info"><td>Produto</td><td>Descrição</td><td>Preço em Reais</td></tr>
+												<tr class="danger"><td>Produto</td><td>Descrição</td><td>Preço</td></tr>
+												<tr class="success"><td>Produto</td><td>Descrição</td><td>Preço</td></tr>
+												<tr class="success"><td>Produto</td><td>Descrição</td><td>Preço</td></tr>
+												<tr class="danger"><td>Produto</td><td>Descrição</td><td>Preço</td></tr>
+											</table>
+										</div>
+									</div>
+                    
+						</div>
+					 
                     </div>
-
+				
                 </div> <!-- termina o Colapso -->
-
-                <div class="col-md-1 col-sm-1"></div>
+				
             </div >
+			<div class="col-md-1 col-sm-1"></div>
+		</div>
 			
 			
-            <div class="col-md-2"></div>
-
-
+			
+            
+			<!-- inicio div footer -->
+			<div class="col-md-2"></div>
             <div class="col-md-8">
                 <?php
                 include './footer.php';
                 ?>
             </div>
             <div class="col-md-2"></div>
+			<!-- termina a div do footer -->
 
 
             <script src="../js/jquery-2.1.1.js"></script>
