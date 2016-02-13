@@ -6,27 +6,43 @@
 	
 	//$resumo = "*** Pedido efetuado ***</br></br>";
 	
+	//situacao_id --> 1 = ABERTO
+	//TODO buscar cliente logado
+	//TODO pegar data pelo php e inserir em uma variavel
+	//TODO recuperar OBSERVACAO da pagina carrinho.php
+	$queryins = "INSERT INTO pedido (situacao_id,cliente_id,datacompra,obs) VALUES (1,1,'2015-03-03 20:25:22','Teste obs')";
+	mysqli_query($link, $queryins);
+	$pedido_id = mysqli_insert_id($link);
+	
 	foreach($_SESSION['carrinho'] as $id => $qtd){
 		$query = "select * from produto where id=$id";
 		$result = mysqli_query($link, $query);
 		$row    = mysqli_fetch_assoc($result);
 		$nome  = $row['nome'];
 		$preco = number_format($row['preco'], 2, ',', '.');
+		$precobd = $row['preco'];
 		$sub   = number_format($row['preco'] * $qtd, 2, ',', '.');
 
 		$total += $row['preco'] * $qtd;
 		
 		$resumo .= $qtd." ".$nome." = R$ ".$sub."</br>";
 		
-		//TODO --> INSERT NA TABELA PEDIDO <--
+		//mysqli_free_result($result);
 		
-		mysqli_free_result($result);
+		$queryinsi = "INSERT INTO itempedido (pedido_id,produto_id,quantidade,valor) VALUES ($pedido_id,$id,$qtd,$precobd)";
+		mysqli_query($link, $queryinsi);
 	}
-	mysqli_close($link);
+	$totalbd = $total;
 	$total = number_format($total, 2, ',', '.');
-	
+	 
 	$resumo .= "</br>".$white."Total do pedido: R$ ".$total;
 	
+	//NUMERO DE PEDIDO 29431000+ID
+	$numeropedido = 29431000 + $pedido_id;
+	$queryupt = "UPDATE pedido SET numeropedido=$numeropedido, total=$totalbd WHERE id=$pedido_id";
+	mysqli_query($link, $queryupt);
+	
+	mysqli_close($link);
 	session_destroy();
 ?>
 
@@ -75,7 +91,7 @@
 				<?php
 					
 					echo "<br>".$white."*** Informações do Pedido ***<br><br>";
-					echo $white."NÚMERO DO PEDIDO - XXXXX <br>";
+					echo $white."NÚMERO DO PEDIDO - $numeropedido <br>";
 					echo $white.$resumo;
 					echo "</br></br>".$white."Dados da entrega.: Buscar no banco os dados do cliente. <br>";
 					echo "</br>".$white."Observações: <br><br><br><br> ".$_POST['obs'];
