@@ -23,10 +23,21 @@
             <ul class="nav nav-justified">
                 <li><a href="#">Promoções</a></li>
                 <li><a href="cardapio.php" style="width: auto">Cardápio</a></li>
-                <li><a href="delivery.php">Delivery</a></li>
                 <li><a href="perguntasfreq.php">Perguntas Frequentes</a></li>
 				<li><a href="carrinho.php">Carrinho&nbsp;
-				<span class="badge" style="background-color: #d43f3a;"><?php echo $cont;?></span></a></li>                            
+				<span class="badge" style="background-color: #d43f3a;"><?php echo $cont;?></span></a></li> 
+				<?php
+					if(isset($_SESSION['usuarioid'])) {
+						$usuario = $_SESSION['usuario'];
+						$usuarioid = $_SESSION['usuarioid'];
+						if($usuarioid != 0)
+							echo "<li><a href='status.php'>$usuario</a></li>";
+						else
+							echo "<li><a href='delivery.php'>Entrar/Cadastrar</a></li>";
+					}
+					else
+						echo "<li><a href='delivery.php'>Entrar/Cadastrar</a></li>";
+				?>                           
             </ul>
         </div>
     </div>

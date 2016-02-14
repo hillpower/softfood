@@ -41,9 +41,33 @@
                 </button>
 
             </div>
-
+			
             <div class="col-md-3 col-sm-1"></div>
         </div >
+		
+		<?php
+			if(isset($_SESSION['usuarioid'])) {
+				$usuario = $_SESSION['usuario'];
+				$usuarioid = $_SESSION['usuarioid'];
+				if($usuarioid != 0) {
+				?>
+					<div class="alert alert-success">
+						<button type="button" class="close" data-dismiss="alert">×</button>
+						<strong>Muito bem!</strong> Você já esta logado no sistema, acesso o cardápio para iniciar seus pedidos.
+					</div>
+				<?php
+				}
+				else{
+				?>	
+					<div class="alert alert-error">
+						<button type="button" class="close" data-dismiss="alert">×</button>
+						<strong>Oh spnap!</strong> Usuário inexistente ou não cadastrado, tente novamente.
+					</div>
+				<?php
+				}
+			}
+		?>
+	
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <?php
@@ -65,32 +89,22 @@
                     <div class="modal-body">
                         <div class="container">
 
-                            <form class="form-horizontal" role="form">
+                            <form class="form-horizontal" role="form" method="post" action="cadastrar.php?tipo=1">
                                 <div class="form-group">
-                                    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                                    <label for="inputEmail2" class="col-sm-2 control-label">Email</label>
                                     <div class="col-sm-10">
-                                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                                        <input type="email" class="form-control" name="inputEmail2" id="inputEmail2" placeholder="Email">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputPassword3" class="col-sm-2 control-label">Senha</label>
+                                    <label for="inputPassword2" class="col-sm-2 control-label">Senha</label>
                                     <div class="col-sm-10">
-                                        <input type="password" class="form-control" id="inputPassword3" placeholder="Senha">
+                                        <input type="password" class="form-control" name="inputPassword2" id="inputPassword2" placeholder="Senha">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-offset-2 col-sm-10">
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox"> Lembrar-me
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <div class="col-sm-offset-2 col-sm-10">
-                                        <button type="submit" class="btn btn-default">Entrar</button>
+                                        <button type="submit" class="btn btn-primary">Entrar</button>
                                     </div>
                                 </div>
                             </form>
@@ -107,42 +121,45 @@
 						 <!-- Segundo formulario -->
                          <div class="container">
 
-                            <form class="form-horizontal" role="form">
+                            <form class="form-horizontal" role="form" method="post" action="cadastrar.php?tipo=2">
+								<div class="form-group">
+                                    <label for="inputNome3" class="col-sm-2 control-label">Nome</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" name="inputNome3" id="inputNome3" placeholder="Nome">
+                                    </div>
+                                </div>
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
                                     <div class="col-sm-10">
-                                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                                        <input type="email" class="form-control" name="inputEmail3" id="inputEmail3" placeholder="Email">
                                     </div>
                                 </div>
-								    <div class="form-group">
-										<label for="inputPassword3" class="col-sm-2 control-label">Senha</label>
+								<div class="form-group">
+									<label for="inputPassword3" class="col-sm-2 control-label">Senha</label>
 										<div class="col-sm-10">
-                                        <input type="password" class="form-control" id="inputPassword3" placeholder="Senha">
+                                        <input type="password" class="form-control" name="inputPassword3" id="inputPassword3" placeholder="Senha">
                                     </div>
-									</div>
-									<div class="form-group">
-										<label for="inputPassword3" class="col-sm-2 control-label"> <!-- campo da senha --> 	</label>
-										<div class="col-sm-10">
-                                        <input type="password" class="form-control" id="inputPassword3" placeholder="Confirmar Senha">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-sm-offset-2 col-sm-10">
+								</div>
+								<div class="form-group">
+                                    <label for="inputEnd3" class="col-sm-2 control-label">Endereço</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" name="inputEnd3" id="inputEnd3" placeholder="Endereço">
                                     </div>
                                 </div>
-
-                                <div class="form-group">
+								<div class="form-group">
+                                    <label for="inputTel3" class="col-sm-2 control-label">Telefone</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" name="inputTel3" id="inputTel3" placeholder="Telefone">
+                                    </div>
+                                </div>
+								<div class="form-group">
                                     <div class="col-sm-offset-2 col-sm-10">
-                                        <button type="submit" class="btn btn-default">Cadastrar</button>
+                                        <button type="submit" class="btn btn-primary">Cadastrar</button>
                                     </div>
                                 </div>
                             </form>
 
                         </div>
-                            
-                        
-
-
 
                     </div>
                     

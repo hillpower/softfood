@@ -7,10 +7,22 @@
 	//$resumo = "*** Pedido efetuado ***</br></br>";
 	
 	//situacao_id --> 1 = ABERTO
-	//TODO buscar cliente logado
-	//TODO pegar data pelo php e inserir em uma variavel
-	//TODO recuperar OBSERVACAO da pagina carrinho.php
-	$queryins = "INSERT INTO pedido (situacao_id,cliente_id,datacompra,obs) VALUES (1,1,'2015-03-03 20:25:22','Teste obs')";
+	
+	//buscar cliente logado
+	$cliente_id = $_SESSION['usuarioid']; 
+	$cliente_nome = $_SESSION['usuario']; 
+	$sqlcliente = "select * from cliente where id=$cliente_id";
+	$result = mysqli_query($link, $sqlcliente);
+	$rowcliente = mysqli_fetch_assoc($result);
+	$cliente_end = $rowcliente['endereco'];
+	
+	//pegar data pelo php e inserir em uma variavel
+	$data_atual = date("Y-m-d H:i:s");
+	
+	//recuperar OBSERVACAO da pagina carrinho.php
+	$obs = $_POST['obs'];
+	
+	$queryins = "INSERT INTO pedido (situacao_id,cliente_id,datacompra,obs) VALUES (1,$cliente_id,'$data_atual','$obs')";
 	mysqli_query($link, $queryins);
 	$pedido_id = mysqli_insert_id($link);
 	
@@ -93,8 +105,9 @@
 					echo "<br>".$white."*** Informações do Pedido ***<br><br>";
 					echo $white."NÚMERO DO PEDIDO - $numeropedido <br>";
 					echo $white.$resumo;
-					echo "</br></br>".$white."Dados da entrega.: Buscar no banco os dados do cliente. <br>";
-					echo "</br>".$white."Observações: <br><br><br><br> ".$_POST['obs'];
+					echo "</br></br>".$white."Dados da entrega.: $cliente_nome - $cliente_end </br>";
+					echo "</br>".$white."Observações: ".$obs;
+					echo "<br><br><br><br>";
 					
 					
 				?>

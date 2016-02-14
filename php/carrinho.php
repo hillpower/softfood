@@ -87,7 +87,7 @@
 							<th width="150">Remover</th>
 						</tr>
 					</thead>
-				<form action="?acao=up" method="post">
+				<form action="?acao=up" method="post" id="formcar">
 			
 			<tfoot>
 						<tr>
@@ -96,7 +96,7 @@
 														
 						<tr>
 							<td colspan="4"><a href="cardapio.php"><button type="button" class="btn btn-warning">Continuar Comprando</button></a></td>
-							<td colspan="1"><a href="finalizar.php"><button type="button" class="btn btn-primary">Finalizar Pedido</button></a></td>
+							<td colspan="1"><button type="button" class="btn btn-primary" onclick="javacript: finalizar();">Finalizar Pedido</button></td>
 							
 			</tfoot>
 			
@@ -145,8 +145,7 @@
 			<tr>										
 				<td colspan="5" >
 					<label for="comment">Observações:</label>
-					<textarea class="form-control" rows="5" id="obs">Troco para R$ </textarea>
-					
+					<textarea class="form-control" rows="5" name="obs" id="obs">Troco para R$ </textarea>
 				</td>										
 			<tr>
         </form>
@@ -171,4 +170,11 @@
 		
 		
     </body>
+	<script>
+		function finalizar() {
+			document.getElementById("formcar").action="finalizar.php";
+			document.getElementById("formcar").submit();
+			//alert(document.getElementById("formcar").action);
+		}
+	</script>
 </html>
