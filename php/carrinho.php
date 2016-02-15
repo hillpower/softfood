@@ -43,6 +43,12 @@
          }
        
       }
+	  
+	  $btFinalizar = "btn btn-primary active";
+	  if(count($_SESSION['carrinho']) == 0)
+		$btFinalizar = "btn btn-primary disabled";
+	  if($_SESSION['usuarioid'] == 0)
+		$btFinalizar = "btn btn-primary disabled";
 ?>
 	  
 <!DOCTYPE html>
@@ -96,7 +102,7 @@
 														
 						<tr>
 							<td colspan="4"><a href="cardapio.php"><button type="button" class="btn btn-warning">Continuar Comprando</button></a></td>
-							<td colspan="1"><button type="button" class="btn btn-primary" onclick="javacript: finalizar();">Finalizar Pedido</button></td>
+							<td colspan="1"><button type="button" class="<?php echo $btFinalizar;?>" onclick="javacript: finalizar();">Finalizar Pedido</button></td>
 							
 			</tfoot>
 			
