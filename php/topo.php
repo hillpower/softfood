@@ -6,6 +6,17 @@
 	}
 	//echo count($_SESSION['carrinho']);
 ?>
+<!-- Bootstrap -->
+        <link href='http://fonts.googleapis.com/css?family=Frijole' rel='stylesheet' type='text/css'>
+        <script src="../js/jquery-2.1.1.js"></script>
+        <script src="../js/bootstrap.js"></script>
+        <link href="../css/bootstrap.css" rel="stylesheet" media="screen" type="text/css">
+		
+		
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 
 <nav class="navbar navbar-inverse" role="navigation">
     <div class="container-fluid">
@@ -31,14 +42,47 @@
 						$usuario = $_SESSION['usuario'];
 						$usuarioid = $_SESSION['usuarioid'];
 						if($usuarioid != 0)
-							echo "<li><a href='status.php'>$usuario</a></li>";
+							echo "
+								
+									<li class='dropdown' role='tablist'>
+										<a class='dropdown-toggle' data-toggle='dropdown' href='status.php'>$usuario<span class='caret'></span></a>
+										<ul class='dropdown-menu' role='menu' style='width:210px; height:90px;'>
+											<li><a href='#'>Ver Pedidos</a></li>
+											<li><a href='#'>Alterar Dados</a></li>
+											<li><a href='#'>Sair</a></li>                        
+										</ul>
+									</li>
+								  ";
+							
+								   	
 						else
-							echo "<li><a href='delivery.php'>Entrar/Cadastrar</a></li>";
+							echo "<li><a href='delivery.php'>Entrar/Cadastrar</a></li>";			
 					}
 					else
 						echo "<li><a href='delivery.php'>Entrar/Cadastrar</a></li>";
 				?>                           
             </ul>
         </div>
+		
+		
+		
+		
+		
+  
+  
+ 
+		
+		
+		
+		
+		
+		<!--<li><a href='status.php'>$usuario</a></li> -->
+		
+		
+		
+		
+		
+		
+		
     </div>
 </nav>

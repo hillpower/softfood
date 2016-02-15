@@ -53,7 +53,7 @@
 				?>
 					<div class="alert alert-success">
 						<button type="button" class="close" data-dismiss="alert">×</button>
-						<strong>Muito bem!</strong> Você já esta logado no sistema, acesso o cardápio para iniciar seus pedidos.
+						<center><strong>Muito bem!</strong> Você já esta logado no sistema, acesso o cardápio para iniciar seus pedidos.</center>
 					</div>
 				<?php
 				}
@@ -61,7 +61,7 @@
 				?>	
 					<div class="alert alert-error">
 						<button type="button" class="close" data-dismiss="alert">×</button>
-						<strong>Oh spnap!</strong> Usuário inexistente ou não cadastrado, tente novamente.
+						<center><strong>Oh spnap!</strong> Usuário inexistente ou não cadastrado, tente novamente.</center>
 					</div>
 				<?php
 				}
