@@ -59,9 +59,10 @@
 				}
 				else{
 				?>	
+				
 					<div class="alert alert-error">
 						<button type="button" class="close" data-dismiss="alert">×</button>
-						<center><strong>Oh spnap!</strong> Usuário inexistente ou não cadastrado, tente novamente.</center>
+						<center><strong>Oh Desculpe!</strong> Usuário inexistente ou não cadastrado, tente novamente.</center>
 					</div>
 				<?php
 				}

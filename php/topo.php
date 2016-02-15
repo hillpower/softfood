@@ -47,15 +47,17 @@
 									<li class='dropdown' role='tablist'>
 										<a class='dropdown-toggle' data-toggle='dropdown' href='status.php'>$usuario<span class='caret'></span></a>
 										<ul class='dropdown-menu' role='menu' style='width:210px; height:90px;'>
-											<li><a href='#'>Ver Pedidos</a></li>
+											<li><a href='verpedidos.php'>Ver Pedidos</a></li>
 											<li><a href='#'>Alterar Dados</a></li>
-											<li><a href='#'>Sair</a></li>                        
+											<li><a href='logout.php'>Sair</a></li>
+																				
 										</ul>
 									</li>
 								  ";
 							
 								   	
 						else
+						
 							echo "<li><a href='delivery.php'>Entrar/Cadastrar</a></li>";			
 					}
 					else

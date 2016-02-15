@@ -55,7 +55,7 @@
 	mysqli_query($link, $queryupt);
 	
 	mysqli_close($link);
-	session_destroy();
+	//session_destroy(); --- botao de log out funfando ja -- 
 ?>
 
 <!DOCTYPE html>
