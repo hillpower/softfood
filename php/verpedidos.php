@@ -58,10 +58,11 @@
 							  include "../php/conexao.php";
                               //$link = mysqli_connect("localhost", "root", "", "softfood");  
                               
-							  $query = "SELECT p.id, p.numeropedido, c.nome, p.datacompra, p.situacao_id, s.situacao, p.total 
+							  $query = "SELECT p.id, p.numeropedido, c.id, c.nome, p.datacompra, p.situacao_id, s.situacao, p.total 
 										FROM pedido AS p
 										INNER JOIN cliente AS c ON (p.cliente_id = c.id)
-										INNER JOIN situacao AS s ON (p.situacao_id = s.id)";
+										INNER JOIN situacao AS s ON (p.situacao_id = s.id)
+										WHERE c.id = ".$_SESSION['usuarioid'];
 							  if(isset($_GET["sit"]))
 								$query .= " WHERE p.situacao_id = ".$_GET["sit"];
                               	

@@ -23,7 +23,7 @@
 		}
 		
 	}
-	else {
+	else if($_GET["tipo"] == 2){
 		$nome = $_POST["inputNome3"];
 		$email = $_POST["inputEmail3"];
 		$senha = $_POST["inputPassword3"];
@@ -37,7 +37,18 @@
 		$_SESSION['usuarioid'] = $cliente_id;
 		$_SESSION['usuario'] = $nome;
 	}
-	
+	else {
+		$nome = $_POST["inputNome3"];
+		$cpf = $_POST["inputCpf3"];
+		$email = $_POST["inputEmail3"];
+		$senha = $_POST["inputPassword3"];
+		$senha2 = $_POST["inputPassword32"];
+		$end = $_POST["inputEnd3"];
+		$telF = $_POST["inputTelF3"];
+		$telC = $_POST["inputTelC3"];
+		
+		// SQL UPDATE dos dados
+	}
 	$redirect = "delivery.php";
 	header("location:$redirect");
 ?>
