@@ -22,13 +22,16 @@
             ?>
             <!-- termina a navbar -->
         </div>
-
         <div class="col-md-1 col-sm-1"></div>
-        <div class="col-md-12 col-sm-1"style="text-align: center ; color: #6666ff; font-family: 'Frijole', cursive;"><h2>Escolha como deseja fazer seu pedido ?</h2> </div>
-        <div class="container-fluid" style="margin-bottom: 200px; padding-top:200px">
-
+		<!---------------------------------------------------->
+		<div class="col-md-2 col-sm-1"></div>
+        <div class="col-md-8 col-sm-8"style="text-align: center ; color: #6666ff; font-family: 'Frijole', cursive;"><h2>Escolha como deseja fazer seu pedido ?</h2> </div>
+        <div class="col-md-2 col-sm-1"></div>
+		<!---------------------------------------------------->
+		<div class="container-fluid" style="margin-bottom: 200px; padding-top:200px">
+		
             <div class="col-md-3 col-sm-1"></div>
-
+		
             <div class="col-md-3 col-sm-10">
                 <a href="#" id="example" class="btn btn-default">
                     <img src="../img/img home/telefone.png">
@@ -44,6 +47,7 @@
 			
             <div class="col-md-3 col-sm-1"></div>
         </div >
+		<!---------------------------------------------------->
 		
 		<?php
 			if(isset($_SESSION['usuarioid'])) {
@@ -51,24 +55,32 @@
 				$usuarioid = $_SESSION['usuarioid'];
 				if($usuarioid != 0) {
 				?>
+					<div class="col-md-2 col-sm-1"></div>
+					<div class="col-md-8 col-sm-10">
 					<div class="alert alert-success">
 						<button type="button" class="close" data-dismiss="alert">×</button>
-						<center><strong>Muito bem!</strong> Você já esta logado no sistema, acesso o cardápio para iniciar seus pedidos.</center>
+						<center><strong>Muito bem!</strong> Você já esta logado no sistema, acesse o cardápio para iniciar seus pedidos.</center>
 					</div>
+					</div>
+					<div class="col-md-2 col-sm-1"></div>
 				<?php
 				}
 				else{
 				?>	
-				
-					<div class="alert alert-error">
+					<div class="col-md-2 col-sm-1"></div>
+					<div class="col-md-8 col-sm-10">
+					<div class="alert alert-danger">
 						<button type="button" class="close" data-dismiss="alert">×</button>
 						<center><strong>Oh Desculpe!</strong> Usuário inexistente ou não cadastrado, tente novamente.</center>
+						</br>
 					</div>
+					</div>
+					<div class="col-md-2 col-sm-1"></div>
 				<?php
 				}
 			}
 		?>
-	
+		<div class="container-fluid">
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <?php
@@ -76,6 +88,7 @@
             ?>
         </div>
         <div class="col-md-2"></div>
+		</div>
         <!-- Button trigger modal -->
 
 		<!-- Cadrastro de um novo cliente -->

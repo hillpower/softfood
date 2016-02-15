@@ -22,20 +22,22 @@
             ?>
             <!-- termina a navbar -->
         </div>
-
         <div class="col-md-1 col-sm-1"></div>
-        <div class="col-md-12 col-sm-1"style="text-align: center ; color: #6666ff; font-family: 'Frijole', cursive;"><h2>*** Ações dessa tela *** </br>VER PEDIDOS - ALTERAR DADOS - SAIR</br></br>IMPLEMENTAR URGENTE ESTA TELA</h2> </div>
-        <div class="container-fluid" style="margin-bottom: 200px; padding-top:200px">
+		
+		
+        <!-- <div class="col-md-12 col-sm-1"style="text-align: center ; color: #6666ff; font-family: 'Frijole', cursive;"><h2>*** Ações dessa tela *** </br>VER PEDIDOS - ALTERAR DADOS - SAIR</br></br>IMPLEMENTAR URGENTE ESTA TELA</h2> </div> -->
+        
+		<div class="container-fluid" style="margin-bottom: 200px; padding-top:200px">
 
             <div class="col-md-3 col-sm-1"></div>
 
-            <div class="col-md-3 col-sm-10">
+            <div class="col-md-3 col-sm-1">
                 <a href="#" id="example" class="btn btn-default">
                     <img src="../img/img home/telefone.png">
                 </a>
             </div>
 
-            <div class="col-md-3 col-sm-10">
+            <div class="col-md-3 col-sm-1">
                 <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
                     <img src="../img/img home/computador.png">
                 </button>
@@ -59,10 +61,13 @@
 				}
 				else{
 				?>	
-					<div class="alert alert-error">
+					<div class="container-fluid">
+					<div class="alert alert-error" style= "background-color: Black">
 						<button type="button" class="close" data-dismiss="alert">×</button>
 						<center><strong>Oh Desculpe!</strong> Usuário inexistente ou não cadastrado, tente novamente.</center>
 					</div>
+					</div>
+					
 				<?php
 				}
 			}

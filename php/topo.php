@@ -45,7 +45,7 @@
 							echo "
 								
 									<li class='dropdown' role='tablist'>
-										<a class='dropdown-toggle' data-toggle='dropdown' href='status.php'>$usuario<span class='caret'></span></a>
+										<a class='dropdown-toggle' data-toggle='dropdown' href='status.php'><strong><font color='white'>Olá $usuario </font> </strong><span class='caret'></span></a>
 										<ul class='dropdown-menu' role='menu' style='width:210px; height:90px;'>
 											<li><a href='verpedidos.php'>Ver Pedidos</a></li>
 											<li><a href='#'>Alterar Dados</a></li>
