@@ -10,5 +10,7 @@ INSERT INTO produto (tipoproduto_id, nome, descricao, preco) VALUES
 	
 INSERT INTO situacao (situacao) VALUES
 	('Aberto'),
-	('Transito'),
-	('Fechado');
+	('Preparando'),
+	('Trânsito'),
+	('Finalizado'),
+	('Cancelado');
