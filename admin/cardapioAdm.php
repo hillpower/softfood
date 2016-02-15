@@ -75,7 +75,7 @@
 					  <ul class="sub">
                           <li><a  href="cardapioAdm.php">• CARDÁPIO</a></li>
 						  <li><a  href="usuarioAdm.php">• USUÁRIOS</a></li>
-						  <li><a  href="pmanutencao.html">• PEDIDOS</a></li>
+						  <li><a  href="pedidosAdm.php">• PEDIDOS</a></li>
 						  <li><a  href="pmanutencao.html">• OUTROS</a></li>
                       </ul>	
                   </li>
