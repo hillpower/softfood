@@ -28,7 +28,7 @@
         <div class="col-md-8 col-sm-8"style="text-align: center ; color: #6666ff; font-family: 'Frijole', cursive;"><h2>Escolha como deseja fazer seu pedido ?</h2> </div>
         <div class="col-md-2 col-sm-1"></div>
 		<!---------------------------------------------------->
-		<div class="container-fluid" style="margin-bottom: 200px; padding-top:200px">
+		<div class="container-fluid" >
 		
             <div class="col-md-3 col-sm-1"></div>
 		
