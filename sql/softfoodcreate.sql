@@ -84,4 +84,5 @@ CREATE TABLE itempedido (
       ON UPDATE NO ACTION
 );
 
-
+ALTER TABLE `produto`
+	ADD COLUMN `imagem` VARCHAR(255) NULL DEFAULT NULL AFTER `preco`;

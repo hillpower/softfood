@@ -5,12 +5,15 @@
 	if ($_GET['uTipo'] == "salvar" && $_GET['uId'] == 0) {
 		$nome = $_GET['uNome'];
 		$descricao = $_GET['uDescricao'];
-		$preco = $_GET['uPreco']	;
-	
-		$query = "INSERT INTO produto (nome, descricao, preco) VALUES
-		('$nome', '$descricao', $preco)";
+		$preco = $_GET['uPreco'];
+		$tipoproduto = $_GET['uTipoProduto'];
+		
+		$query = "INSERT INTO produto (tipoproduto_id, nome, descricao, preco) VALUES
+		($tipoproduto, '$nome', '$descricao', $preco)";
 		
 		mysqli_query($link, $query);
+		$produto_id = mysqli_insert_id($link);
+		echo $produto_id;
 	}
 	else if ($_GET['uTipo'] == "remover") {
 		$id = $_GET['uId'];
@@ -24,14 +27,15 @@
 		$nome = $_GET['uNome'];
 		$descricao = $_GET['uDescricao'];
 		$preco =($_GET['uPreco']);
+		$tipoproduto = $_GET['uTipoProduto'];
 		
-		$query = "UPDATE produto SET nome='$nome', descricao='$descricao', preco=$preco WHERE id = $id";
-			
+		$query = "UPDATE produto SET tipoproduto_id=$tipoproduto, nome='$nome', descricao='$descricao', preco=$preco WHERE id = $id";
+		
 		mysqli_query($link, $query);
-		
+		echo $id;	
 	}
 	
 	mysqli_close($link);
 	
-	//echo $query;
+	//error_log($query);
 ?>
