@@ -34,19 +34,19 @@
 	  <div id="login-page">
 	  	<div class="container">
 	  	
-		      <form class="form-login" action="admin.html">
+		      <form class="form-login" action="admin.php" method="POST">
 		        <h2 class="form-login-heading">entrar</h2>
 		        <div class="login-wrap">
-		            <input type="text" class="form-control" placeholder="usuário" autofocus>
+		            <input type="text" class="form-control" placeholder="email" autofocus name="uEmail">
 		            <br>
-		            <input type="password" class="form-control" placeholder="senha">
+		            <input type="password" class="form-control" placeholder="senha" name="uSenha">
 		            <label class="checkbox">
 		                <span class="pull-right">
 		                    <a data-toggle="modal" href="login.html#myModal01"> Esqueceu sua senha?</a>
 		
 		                </span>
 		            </label>
-		            <button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i> ENTRAR</button>
+		            <button class="btn btn-theme btn-block" type="submit"><i class="fa fa-lock"></i> ENTRAR</button>
 		            <hr>
 		            
 		            <div class="registration">
@@ -66,7 +66,7 @@
 		                      </div>
 		                      <div class="modal-body">
 		                          <p>Digite seu email abaixo para entrar em contato com o administrador.</p>
-		                          <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
+		                          <input type="text" name="emailesqueceu" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
 		
 		                      </div>
 		                      <div class="modal-footer">
@@ -89,7 +89,7 @@
 		                      </div>
 		                      <div class="modal-body">
 		                          <p>Digite seu email abaixo para entrar em contato com o administrador.</p>
-		                          <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
+		                          <input type="text" name="emailcriar" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
 
 		                      </div>
 		                      <div class="modal-footer">
