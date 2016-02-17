@@ -63,6 +63,14 @@
         <script src="../js/jquery-2.1.1.js"></script>
         <script src="../js/bootstrap.js"></script>
         <link href="../css/bootstrap.css" rel="stylesheet" media="screen" type="text/css">
+		
+		<!-- ARRUMAR AQUI __ SOMENTE PARA TESTE -->
+		
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<!-- -->
+		
 
     </head>
     <body class="jumbotron">
@@ -103,6 +111,7 @@
 						<tr>
 							<td colspan="4"><a href="cardapio.php"><button type="button" class="btn btn-warning">Continuar Comprando</button></a></td>
 							<td colspan="1"><button type="button" class="<?php echo $btFinalizar;?>" onclick="javacript: finalizar();">Finalizar Pedido</button></td>
+							
 							
 			</tfoot>
 			

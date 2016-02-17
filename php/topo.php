@@ -27,12 +27,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="../index.php">SoftFood</a>
+            <a class="navbar-brand" href="home.php">SoftFood</a>
         </div>
         <!--collapsed para celular-->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav nav-justified">
-                <li><a href="#">Promoções</a></li>
+                <li><a href="promocoes.php">Promoções</a></li>
                 <li><a href="cardapio.php" style="width: auto">Cardápio</a></li>
                 <li><a href="perguntasfreq.php">Perguntas Frequentes</a></li>
 				<li><a href="carrinho.php">Carrinho&nbsp;

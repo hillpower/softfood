@@ -27,11 +27,11 @@
             <div class="col-md-2 col-sm-1"></div>
 
             <div class="col-md-8 col-sm-10">
-                <!-- comeca o slide -->
-                <?PHP
-                include './home/carousel.php';
-                ?>
-                <!-- termina o slide -->
+                <!-- img para manutencao -->
+               <?php
+			   include '/home/carousel.php';
+			   ?>
+                <!-- fim img-->
             </div>
 
             <div class="col-md-2 col-sm-1"></div>

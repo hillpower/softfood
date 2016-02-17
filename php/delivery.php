@@ -6,7 +6,7 @@
         
         <meta charset = "utf-8">
         <!-- Bootstrap -->
-        <link href='http://fonts.googleapis.com/css?family=Frijole' rel='stylesheet' type='text/css'>
+        
         <script src="../js/jquery-2.1.1.js"></script>
         <script src="../js/bootstrap.js"></script>
         <link href="../css/bootstrap.css" rel="stylesheet" media="screen" type="text/css">
@@ -24,15 +24,19 @@
         </div>
         <div class="col-md-1 col-sm-1"></div>
 		<!---------------------------------------------------->
+		<div class="container-fluid" >
 		<div class="col-md-2 col-sm-1"></div>
-        <div class="col-md-8 col-sm-8"style="text-align: center ; color: #6666ff; font-family: 'Frijole', cursive;"><h2>Escolha como deseja fazer seu pedido ?</h2> </div>
+        <div class="col-md-8 col-sm-8"style="text-align: center ; color: #6666ff; font-family: cursive;"><h2>Escolha como deseja fazer seu pedido ?</h2> </div>
         <div class="col-md-2 col-sm-1"></div>
+		</div>
+		</br></br></br></br>
+			
 		<!---------------------------------------------------->
 		<div class="container-fluid" >
 		
-            <div class="col-md-3 col-sm-1"></div>
+            <div class="col-md-4 col-sm-1"></div>
 		
-            <div class="col-md-3 col-sm-10">
+            <div class="col-md-2 col-sm-10">
                 <a href="#" id="example" class="btn btn-default">
                     <img src="../img/img home/telefone.png">
                 </a>
@@ -47,6 +51,8 @@
 			
             <div class="col-md-3 col-sm-1"></div>
         </div >
+		</br></br></br></br></br></br></br></br></br>
+		</br>
 		<!---------------------------------------------------->
 		
 		<?php
@@ -186,8 +192,8 @@
     <script type="text/javascript">
         $(function() {
             $('#example').popover({
-                title: 'Exemplo Telefone',
-                content: 'Exemplo 3231-7001 / 3231-7002 ',
+                title: 'Telefone para Contato',
+                content: '3231-7001 / 3231-7002 ',
                 placement: 'bottom'
             });
         });

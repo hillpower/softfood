@@ -44,14 +44,15 @@ $row = mysqli_fetch_assoc($result);
                 	<div class="row mt">
                 		<div class="col-lg-12">
                 		
-                		<div class="content-panel">
                 		
-						<caption class="alert alert-info"><h4><strong>Atualizar Dados</strong></h4></caption>
+                		
+						<caption class="alert alert-info"><h4><strong>Atualizar Dados</strong></h4></caption> </br>
 						
                           <!-- Segundo formulario -->
-                         <div class="container">
-
-                            <form class="form-horizontal" role="form" method="post" action="cadastrar.php?tipo=3">
+                         
+						<div class="content-panel">
+						
+                            <form class="form-horizontal" role="form" method="post" action="cadastrar.php?tipo=3" style="text-align:left";>
 								<div class="form-group">
                                     <label for="inputNome3" class="col-sm-2 control-label">Nome</label>
                                     <div class="col-sm-10">
@@ -101,13 +102,16 @@ $row = mysqli_fetch_assoc($result);
                                     </div>
                                 </div>
 								<div class="form-group">
-                                    <div class="col-sm-offset-2 col-sm-10">
-                                        <button type="submit" class="btn btn-primary">Atualizar</button>
-                                    </div>
+                                    <div class="col-md-10 col-sm-10"></div>
+                                    <div class="col-md-1 col-sm-10"></div>
+                                    <div class="col-md-1 col-sm-10"><type="submit" class="btn btn-primary">   Atualizar  </button></div>
+                                    
+									
+									</div>
                                 </div>
                             </form>
 
-                        </div>
+                        
  
                       </div><!-- /content-panel -->
                       	</br>
@@ -119,7 +123,7 @@ $row = mysqli_fetch_assoc($result);
       		</section><! --/wrapper -->
 			</div> <!-- fim div meio-->
 
-            <div class="col-md-2 col-sm-1"></div>
+            
         </div>
 		
 		

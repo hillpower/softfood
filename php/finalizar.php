@@ -99,18 +99,16 @@
 				<div class="col-md-2 col-sm-1"></div>
 				<div class="col-md-8 col-sm-10">
 				<div class="panel panel-primary">
-								
+					<div style="text-align:left;">			
 				<?php
-					
-					echo "<br>".$white."*** Informações do Pedido ***<br><br>";
-					echo $white."NÚMERO DO PEDIDO - $numeropedido <br>";
-					echo $white.$resumo;
+				   echo "<br>".$white."*** Informações do Pedido ***<br><br>";
+					echo $white."NÚMERO DO PEDIDO - $numeropedido <br><br>";
+					echo $white.$resumo.'<br>';
 					echo "</br></br>".$white."Dados da entrega.: $cliente_nome - $cliente_end </br>";
 					echo "</br>".$white."Observações: ".$obs;
 					echo "<br><br><br><br>";
-					
-					
 				?>
+				    </div>
 				
 				</div>
 				</div>
