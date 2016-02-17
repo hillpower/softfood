@@ -1,4 +1,7 @@
-      <!-- **********************************************************************************************************************************************************
+<!DOCTYPE html>
+<html lang="en">      
+	  
+	  <!-- **********************************************************************************************************************************************************
       TOP BAR CONTENT & NOTIFICATIONS
       *********************************************************************************************************************************************************** -->
       <!--header start-->
@@ -50,11 +53,11 @@
                               <tr>
                                 <!--  <th> <i class="fa fa-bookmark"></i> IMAGEM </th>  teste da img-->
 								  <th><i class="fa fa-bullhorn"></i> Número</th>
-                                  <th class="hidden-phone"><i class="fa fa-question-circle"></i> Cliente</th>
-                                  <th><i class="fa fa-bookmark"></i> Data</th>
+                                  <th class="hidden-phone"><i class="fa fa-male"></i> Cliente</th>
+                                  <th><i class="fa fa-calendar"></i> Data</th>
                                   <th><i class="fa fa-bookmark"></i> Situação</th>
-								  <th><i class="fa fa-bookmark"></i> Valor</th>
-								  <th><i class="fa fa-bookmark"></i> Alterar situação</th>
+								  <th><i class="fa fa-usd"></i> Valor</th>
+								  <th><i class="fa fa-edit"></i> Alterar situação</th>
 								  
                               </tr>
                               </thead>
@@ -144,7 +147,29 @@
       			
       		</section><! --/wrapper -->
             </section><!-- /MAIN CONTENT -->
-      
+			
+			        
+			  <!-- Modal -->
+			  <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+				  <div class="modal-dialog">
+					  <div class="modal-content">
+						  <div class="modal-header">
+							  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							  <h4 class="modal-title">RESUMO DO PEDIDO</h4>
+						  </div>
+						  <div class="modal-body">
+							  <h4>
+								<span id="resumoTexto">Resumo do pedido.</span>
+							  </h4>	
+						  </div>
+						  <div class="modal-footer">
+							  <button data-dismiss="modal" class="btn btn-default" type="button" id="btFecharModal">Fechar</button>
+						  </div>
+					  </div>
+				  </div>
+			  </div>
+			 <!-- modal -->
+		 
             <!--main content end-->
             <!--footer start-->
 			<?php
@@ -195,30 +220,8 @@
 			}
       
         </script>
-        
-          <!-- Modal -->
-	      <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
-	          <div class="modal-dialog">
-	              <div class="modal-content">
-	                  <div class="modal-header">
-	                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-	                      <h4 class="modal-title">RESUMO DO PEDIDO</h4>
-	                  </div>
-	                  <div class="modal-body">
-						  <h4>
-							<span id="resumoTexto">Resumo do pedido.</span>
-						  </h4>	
-	                  </div>
-	                  <div class="modal-footer">
-	                      <button data-dismiss="modal" class="btn btn-default" type="button" id="btFecharModal">Fechar</button>
-	                  </div>
-	              </div>
-	          </div>
-	      </div>
-	     <!-- modal -->
-      
-        </body>
-      </html>
+
+</html>
       
       
       

@@ -1,4 +1,7 @@
-<!-- **********************************************************************************************************************************************************
+<!DOCTYPE html>
+<html lang="en">
+
+	  <!-- **********************************************************************************************************************************************************
       TOP BAR CONTENT & NOTIFICATIONS
       *********************************************************************************************************************************************************** -->
       <!--header start-->
@@ -34,9 +37,9 @@
                               <thead>
                              
                               <tr>
-                                  <th><i class="fa fa-bullhorn"></i> NOME</th>
-                                  <th class="hidden-phone"><i class="fa fa-question-circle"></i> EMAIL</th>
-                                  <th><i class="fa fa-bookmark"></i> SENHA</th>
+                                  <th><i class="fa fa-user"></i> NOME</th>
+                                  <th class="hidden-phone"><i class="fa fa-envelope-o"></i> EMAIL</th>
+                                  <th><i class="fa fa-question-circle"></i> SENHA</th>
                                   <th></th>
                               </tr>
                               </thead>
@@ -103,7 +106,39 @@
       			
       		</section><! --/wrapper -->
             </section><!-- /MAIN CONTENT -->
-      
+			
+			<!-- Modal -->
+			  <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+				  <div class="modal-dialog">
+					  <div class="modal-content">
+						  <div class="modal-header">
+							  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							  <h4 class="modal-title">Deseja cadastrar um novo usuário ?</h4>
+						  </div>
+						  <div class="modal-body">
+								<form method="post" action=> <!-- ARRUMAR AQUI -->	
+							  <p>Digite o nome do novo usuário abaixo.
+							  <input type="text" name="nome" id="uNome" placeholder="Nome" autocomplete="off" class="form-control placeholder-no-fix">
+							  </p>
+							  <p>Digite o endereço de email abaixo.
+							  <input type="text" name="email" id="uEmail" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
+							  </p>
+							  <p>Digite a senha abaixo.
+							  <input type="password" name="password" id="uSenha" placeholder="Senha" autocomplete="off" class="form-control placeholder-no-fix">
+							  </p>    
+							  <input type="hidden" id="uId" value=0 />        
+		
+						  </div>
+						  <div class="modal-footer">
+							  <button data-dismiss="modal" class="btn btn-default" type="button" id="btCancelarUsuario">Cancelar</button>
+							  <button class="btn btn-theme" type="button" id="btSalvarUsuario">Salvar</button>
+						  </div>
+						  </form>
+					  </div>
+				  </div>
+			  </div>
+			<!-- modal -->
+		 
             <!--main content end-->
 			<!--footer start-->
 			<?php
@@ -121,42 +156,7 @@
             });
       
         </script>
-        
-        <!-- Modal -->
-	      <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
-	          <div class="modal-dialog">
-	              <div class="modal-content">
-	                  <div class="modal-header">
-	                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-	                      <h4 class="modal-title">Deseja cadastrar um novo usuário ?</h4>
-	                  </div>
-	                  <div class="modal-body">
-	                  		<form method="post" action=> <!-- ARRUMAR AQUI -->	
-	                      <p>Digite o nome do novo usuário abaixo.
-	                      <input type="text" name="nome" id="uNome" placeholder="Nome" autocomplete="off" class="form-control placeholder-no-fix">
-	                      </p>
-	                      <p>Digite o endereço de email abaixo.
-	                      <input type="text" name="email" id="uEmail" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
-	                      </p>
-	                      <p>Digite a senha abaixo.
-	                      <input type="password" name="password" id="uSenha" placeholder="Senha" autocomplete="off" class="form-control placeholder-no-fix">
-	                      </p>    
-	                      <input type="hidden" id="uId" value=0 />        
-	
-	                  </div>
-	                  <div class="modal-footer">
-	                      <button data-dismiss="modal" class="btn btn-default" type="button" id="btCancelarUsuario">Cancelar</button>
-	                      <button class="btn btn-theme" type="button" id="btSalvarUsuario">Salvar</button>
-	                  </div>
-	                  </form>
-	              </div>
-	          </div>
-	      </div>
-	     <!-- modal -->
-      
-        </body>
-      </html>
-      
+
       <script>
           $("#btSalvarUsuario").click(function(){
           	$.ajax({
@@ -218,3 +218,5 @@
 			.end();
 		})
       </script>
+	  
+</html>

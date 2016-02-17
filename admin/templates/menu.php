@@ -3,13 +3,13 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
-              	  <p class="centered"><a href="admin.php"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered">Thiago Moraes</h5>
+              	  <p class="centered"><a href="admin.php"><img src="assets/img/hamburger.png" class="img-circle" width="60"></a></p>
+              	  <h5 class="centered"><?php echo "usuário logado";?></h5>
               	  	
                   <li class="sub-menu">
                       <a class="active" href="admin.html">
                           <i class="fa fa-dashboard"></i>
-                          <span>Dashboard</span>
+                          <span>Menu</span>
                       </a>
 					  <ul class="sub">
                           <li><a  href="cardapioAdm.php">• CARDÁPIO</a></li>

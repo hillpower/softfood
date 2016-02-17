@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +5,7 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>SOFTFOOD - Thiago Moraes</title>
+    <title>SOFTFOOD</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -35,75 +33,68 @@
   <section id="container" >
 	  <header class="header black-bg">
               <div class="sidebar-toggle-box">
-                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Ocultar Menu"></div>
               </div>
             <!--logo start-->
-            <a href="admin.php" class="logo"><b>SOFTFOOD - Thiago Moraes</b></a>
+            <a href="admin.php" class="logo"><b>SOFTFOOD - NOME DA EMPRESA</b></a>
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
                 <!--  notification start -->
                 <ul class="nav top-menu">
                     <!-- inbox dropdown start-->
                     <li id="header_inbox_bar" class="dropdown">
+						<?php
+							include "../php/conexao.php";
+							//$link = mysqli_connect("localhost", "root", "", "softfood");  
+
+							$query = "SELECT count(id) AS quantidade FROM pedido WHERE situacao_id = 1";
+
+							$result = mysqli_query($link, $query);
+							$row = mysqli_fetch_assoc($result);
+							
+							$quantidade = $row["quantidade"];		
+						?>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
                             <i class="fa fa-envelope-o"></i>
-                            <span class="badge bg-theme">5</span>
+                            <span class="badge bg-theme"><?php echo $quantidade;?></span>
                         </a>
                         <ul class="dropdown-menu extended inbox">
                             <div class="notify-arrow notify-arrow-green"></div>
                             <li>
-                                <p class="green">You have 5 new messages</p>
+                                <p class="green">Existem <?php echo $quantidade;?> pedidos em aberto</p>
                             </li>
+							<?php
+							include "../php/conexao.php";
+								//$link = mysqli_connect("localhost", "root", "", "softfood");  
+
+								$query = "SELECT numeropedido, datacompra, total FROM pedido WHERE situacao_id = 1";
+
+								$result = mysqli_query($link, $query);
+								$row = mysqli_fetch_assoc($result);
+								
+								$quantidade = $row["quantidade"];
+								
+								while($row = mysqli_fetch_assoc($result)) {
+									$numero_pedido = $row["numeropedido"];
+									$data = date('d/m/Y H:i:s', strtotime($row["datacompra"]));
+									$valor = number_format($row["total"], 2, ',', '.');
+							?>
                             <li>
-                                <a href="index.html#">
-                                    <span class="photo"><img alt="avatar" src="assets/img/ui-zac.jpg"></span>
+                                <a>
                                     <span class="subject">
-                                    <span class="from">Zac Snider</span>
-                                    <span class="time">Just now</span>
+                                    <span class="from">#<?php echo $numero_pedido;?></span>
+                                    <span class="time">R$<?php echo $valor;?></span>
                                     </span>
                                     <span class="message">
-                                        Hi mate, how is everything?
+                                        <?php echo $data;?>
                                     </span>
                                 </a>
                             </li>
+							<?php
+								}
+							?>
                             <li>
-                                <a href="index.html#">
-                                    <span class="photo"><img alt="avatar" src="assets/img/ui-divya.jpg"></span>
-                                    <span class="subject">
-                                    <span class="from">Divya Manian</span>
-                                    <span class="time">40 mins.</span>
-                                    </span>
-                                    <span class="message">
-                                     Hi, I need your help with this.
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html#">
-                                    <span class="photo"><img alt="avatar" src="assets/img/ui-danro.jpg"></span>
-                                    <span class="subject">
-                                    <span class="from">Dan Rogers</span>
-                                    <span class="time">2 hrs.</span>
-                                    </span>
-                                    <span class="message">
-                                        Love your new Dashboard.
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html#">
-                                    <span class="photo"><img alt="avatar" src="assets/img/ui-sherman.jpg"></span>
-                                    <span class="subject">
-                                    <span class="from">Dj Sherman</span>
-                                    <span class="time">4 hrs.</span>
-                                    </span>
-                                    <span class="message">
-                                        Please, answer asap.
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html#">See all messages</a>
+                                <a href="pedidosAdm.php?sit=1">Ver pedidos em aberto</a>
                             </li>
                         </ul>
                     </li>

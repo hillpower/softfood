@@ -1,4 +1,7 @@
-<!-- **********************************************************************************************************************************************************
+<!DOCTYPE html>
+<html lang="en">
+
+	  <!-- **********************************************************************************************************************************************************
       TOP BAR CONTENT & NOTIFICATIONS
       *********************************************************************************************************************************************************** -->
       <!--header start-->
@@ -35,10 +38,10 @@
                              
                               <tr>
                                 <!--  <th> <i class="fa fa-bookmark"></i> IMAGEM </th>  teste da img-->
-								  <th><i class="fa fa-bullhorn"></i> NOME</th>
-                                  <th class="hidden-phone"><i class="fa fa-question-circle"></i> DESCRIÇÃO</th>
+								  <th><i class="fa fa-slack"></i> NOME</th>
+                                  <th><i class="fa fa-bullhorn"></i> DESCRIÇÃO</th>
 								  <th><i class="fa fa-bookmark"></i> TIPO</th>
-                                  <th><i class="fa fa-bookmark"></i> PREÇO</th>
+                                  <th><i class="fa fa-usd"></i> PREÇO</th>
                                   <th></th>
                               </tr>
                               </thead>
@@ -108,14 +111,81 @@
       			
       		</section><! --/wrapper -->
             </section><!-- /MAIN CONTENT -->
-      
+
+			<!-- Modal -->
+			  <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+				  <div class="modal-dialog">
+					  <div class="modal-content">
+						  <div class="modal-header">
+							  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							  <h4 class="modal-title">Deseja cadastrar um novo produto ?</h4>
+						  </div>
+						  <div class="modal-body">
+								<form method="post" id="formpedido" enctype="multipart/form-data" action="arquivo.php"> <!-- ARRUMAR AQUI -->	
+							  <p>Digite o nome do novo produto abaixo.
+							  <input type="text" name="nome" id="uNome" placeholder="Nome" autocomplete="off" class="form-control placeholder-no-fix">
+							  </p>
+							  <p>Digite a descrição do produto abaixo.
+							  <input type="text" name="descricao" id="uDescricao" placeholder="digite a descrição do produto" autocomplete="off" class="form-control placeholder-no-fix">
+							  </p>
+							  <p>Digite o preço abaixo.
+							  <input type="text" name="preco" id="uPreco" placeholder="valor do produto" autocomplete="off" class="form-control placeholder-no-fix">
+							  </p>    
+							  <input type="hidden" name="uId" id="uId" value=0 />
+							  <input type="hidden" name="uImg" id="uImg" value=0 />
+							  
+							  <p>Selecione o tipo do produto abaixo.
+							  <select name="tipoProduto" id="uTipoProduto" class="form-control">
+								<option value=1>Lanche</option>
+								<option value=2>Bebida</option>
+								<option value=3>Sobremesa</option>
+							  </select>
+							  </p>
+							  
+							  <!-- form para upload de img -->	
+							  Selecione uma imagem: <input name="arquivo" type="file" />
+							  <!-- fim form -->
+		
+						  </div>
+						  <div class="modal-footer">
+							  <button data-dismiss="modal" class="btn btn-default" type="button" id="btCancelarProduto">Cancelar</button>
+							  <button class="btn btn-theme" type="button" id="btSalvarProduto">Salvar</button>
+						  </div>
+						  </form>
+						  
+						  
+					  </div>
+				  </div>
+			  </div>
+			 <!-- modal -->
+			 
+			 <!-- Modal -->
+			  <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModalImagem" class="modal fade">
+				  <div class="modal-dialog">
+					  <div class="modal-content">
+						  <div class="modal-header">
+							  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							  <h4 class="modal-title">PRODUTO</h4>
+						  </div>
+						  <div class="modal-body" align="center">
+							  <img src="fotos/semfoto.jpg" alt="foto" id="pImagem" width="400" height="300">
+						  </div>
+						  <div class="modal-footer">
+							  <button data-dismiss="modal" class="btn btn-default" type="button" id="btFecharModal">Fechar</button>
+						  </div>
+					  </div>
+				  </div>
+			  </div>
+			 <!-- modal -->
+		 
             <!--main content end-->
 			<!--footer start-->
 			<?php
 				include "templates/footer.php";
 			?>
 			<!--footer end-->
-          <!--script for this page-->
+			
+        <!--script for this page-->
           
         <script>
             //custom select box
@@ -126,74 +196,7 @@
       
         </script>
         
-        <!-- Modal -->
-	      <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
-	          <div class="modal-dialog">
-	              <div class="modal-content">
-	                  <div class="modal-header">
-	                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-	                      <h4 class="modal-title">Deseja cadastrar um novo produto ?</h4>
-	                  </div>
-	                  <div class="modal-body">
-	                  		<form method="post" id="formpedido" enctype="multipart/form-data" action="arquivo.php"> <!-- ARRUMAR AQUI -->	
-	                      <p>Digite o nome do novo produto abaixo.
-	                      <input type="text" name="nome" id="uNome" placeholder="Nome" autocomplete="off" class="form-control placeholder-no-fix">
-	                      </p>
-	                      <p>Digite a descrição do produto abaixo.
-	                      <input type="text" name="descricao" id="uDescricao" placeholder="digite a descrição do produto" autocomplete="off" class="form-control placeholder-no-fix">
-	                      </p>
-	                      <p>Digite o preço abaixo.
-	                      <input type="text" name="preco" id="uPreco" placeholder="valor do produto" autocomplete="off" class="form-control placeholder-no-fix">
-	                      </p>    
-	                      <input type="hidden" name="uId" id="uId" value=0 />
-						  <input type="hidden" name="uImg" id="uImg" value=0 />
-						  
-						  <p>Selecione o tipo do produto abaixo.
-						  <select name="tipoProduto" id="uTipoProduto" class="form-control">
-							<option value=1>Lanche</option>
-							<option value=2>Bebida</option>
-							<option value=3>Sobremesa</option>
-						  </select>
-						  </p>
-						  
-						  <!-- form para upload de img -->	
-						  Selecione uma imagem: <input name="arquivo" type="file" />
-						  <!-- fim form -->
-	
-	                  </div>
-	                  <div class="modal-footer">
-	                      <button data-dismiss="modal" class="btn btn-default" type="button" id="btCancelarProduto">Cancelar</button>
-	                      <button class="btn btn-theme" type="button" id="btSalvarProduto">Salvar</button>
-	                  </div>
-	                  </form>
-					  
-					  
-	              </div>
-	          </div>
-	      </div>
-	     <!-- modal -->
-		 
-		 <!-- Modal -->
-	      <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModalImagem" class="modal fade">
-	          <div class="modal-dialog">
-	              <div class="modal-content">
-	                  <div class="modal-header">
-	                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-	                      <h4 class="modal-title">PRODUTO</h4>
-	                  </div>
-	                  <div class="modal-body" align="center">
-						  <img src="fotos/semfoto.jpg" alt="foto" id="pImagem" width="400" height="300">
-	                  </div>
-	                  <div class="modal-footer">
-	                      <button data-dismiss="modal" class="btn btn-default" type="button" id="btFecharModal">Fechar</button>
-	                  </div>
-	              </div>
-	          </div>
-	      </div>
-	     <!-- modal -->
 
-        </body>
-      </html>
       
       <script>
           $("#btSalvarProduto").click(function(){
@@ -269,3 +272,5 @@
 			.end();
 		})
       </script>
+
+</html>
