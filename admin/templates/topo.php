@@ -68,28 +68,24 @@
 								//$link = mysqli_connect("localhost", "root", "", "softfood");  
 
 								$query = "SELECT numeropedido, datacompra, total FROM pedido WHERE situacao_id = 1";
-
 								$result = mysqli_query($link, $query);
-								$row = mysqli_fetch_assoc($result);
-								
-								$quantidade = $row["quantidade"];
-								
+					
 								while($row = mysqli_fetch_assoc($result)) {
 									$numero_pedido = $row["numeropedido"];
 									$data = date('d/m/Y H:i:s', strtotime($row["datacompra"]));
 									$valor = number_format($row["total"], 2, ',', '.');
 							?>
-                            <li>
-                                <a>
-                                    <span class="subject">
-                                    <span class="from">#<?php echo $numero_pedido;?></span>
-                                    <span class="time">R$<?php echo $valor;?></span>
-                                    </span>
-                                    <span class="message">
-                                        <?php echo $data;?>
-                                    </span>
-                                </a>
-                            </li>
+								<li>
+									<a>
+										<span class="subject">
+										<span class="from">#<?php echo $numero_pedido;?></span>
+										<span class="time">R$<?php echo $valor;?></span>
+										</span>
+										<span class="message">
+											<?php echo $data;?>
+										</span>
+									</a>
+								</li>
 							<?php
 								}
 							?>
