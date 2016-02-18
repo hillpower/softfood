@@ -1,8 +1,3 @@
-<?php
-	//echo $_POST["uEmail"];
-	//echo $_POST["uSenha"];
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 

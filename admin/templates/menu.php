@@ -4,7 +4,7 @@
               <ul class="sidebar-menu" id="nav-accordion">
               
               	  <p class="centered"><a href="admin.php"><img src="assets/img/hamburger.png" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered"><?php echo "usuário logado";?></h5>
+              	  <h5 class="centered"><?php echo $_SESSION['usuario_nome'];?></h5>
               	  	
                   <li class="sub-menu">
                       <a class="active" href="admin.html">

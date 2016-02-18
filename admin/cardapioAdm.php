@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 	  <!-- **********************************************************************************************************************************************************
       TOP BAR CONTENT & NOTIFICATIONS
       *********************************************************************************************************************************************************** -->
@@ -129,7 +128,7 @@
 							  <input type="text" name="descricao" id="uDescricao" placeholder="digite a descrição do produto" autocomplete="off" class="form-control placeholder-no-fix">
 							  </p>
 							  <p>Digite o preço abaixo.
-							  <input type="text" name="preco" id="uPreco" placeholder="valor do produto" autocomplete="off" class="form-control placeholder-no-fix">
+							  <input type="number" name="preco" id="uPreco" placeholder="valor do produto" autocomplete="off" class="form-control placeholder-no-fix">
 							  </p>    
 							  <input type="hidden" name="uId" id="uId" value=0 />
 							  <input type="hidden" name="uImg" id="uImg" value=0 />
@@ -195,8 +194,6 @@
             });
       
         </script>
-        
-
       
       <script>
           $("#btSalvarProduto").click(function(){

@@ -1,3 +1,37 @@
+<?php
+	include "../php/conexao.php";
+	session_start();
+	
+	if(isset($_POST["uEmail"]) && isset($_POST["uSenha"])){
+		$email = $_POST["uEmail"];
+		$senha = $_POST["uSenha"];
+		//$senha = md5($_POST["uSenha"]);
+		
+		$query = "SELECT * FROM cliente
+					WHERE email = '$email' and '$senha'";
+		
+		$result = mysqli_query($link, $query);
+		$row = mysqli_fetch_assoc($result);
+		$row_cnt = mysqli_num_rows($result);
+		
+		if ($row_cnt == 1){
+			//$_SESSION['usuario_id'] = $row['id'];
+			$_SESSION['usuario_nome'] = $row['nome'];
+		}
+		else {
+			$redirect = "login.php";
+			header("location:$redirect");
+		}
+	} 
+	
+	else if (isset($_SESSION['usuario_nome'])) {} 
+		
+	else {
+		$redirect = "login.php";
+		header("location:$redirect");
+	}
+?>
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +54,6 @@
     <link href="assets/css/style-responsive.css" rel="stylesheet">
 
     <script src="assets/js/chart-master/Chart.js"></script>
-    
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>

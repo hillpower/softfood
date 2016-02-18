@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	if (isset($_SESSION['usuario_nome'])) {
+		session_destroy();
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
