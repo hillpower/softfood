@@ -38,6 +38,7 @@
 		$_SESSION['usuario'] = $nome;
 	}
 	else {
+		$id = $_SESSION['usuarioid'];
 		$nome = $_POST["inputNome3"];
 		$cpf = $_POST["inputCpf3"];
 		$email = $_POST["inputEmail3"];
@@ -48,6 +49,8 @@
 		$telC = $_POST["inputTelC3"];
 		
 		// SQL UPDATE dos dados
+		$sqlu = "update cliente set nome='$nome', cpf='$cpf', email='$email', senha='$senha', endereco='$endereco', telefonefixo='$telF', telefonecelular='$telC' where id = $id";
+		mysqli_query($link, $sqlu);
 	}
 	$redirect = "delivery.php";
 	header("location:$redirect");

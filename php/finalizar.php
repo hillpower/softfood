@@ -37,7 +37,7 @@
 
 		$total += $row['preco'] * $qtd;
 		
-		$resumo .= $qtd." ".$nome." = R$ ".$sub."</br>";
+		$resumo .= $white.$qtd." ".$nome." = R$ ".$sub."</br>";
 		
 		//mysqli_free_result($result);
 		
@@ -55,6 +55,7 @@
 	mysqli_query($link, $queryupt);
 	
 	mysqli_close($link);
+	unset($_SESSION['carrinho']);
 	//session_destroy(); --- botao de log out funfando ja -- 
 ?>
 
@@ -103,7 +104,7 @@
 				<?php
 				   echo "<br>".$white."*** Informações do Pedido ***<br><br>";
 					echo $white."NÚMERO DO PEDIDO - $numeropedido <br><br>";
-					echo $white.$resumo.'<br>';
+					echo $resumo.'<br>';
 					echo "</br></br>".$white."Dados da entrega.: $cliente_nome - $cliente_end </br>";
 					echo "</br>".$white."Observações: ".$obs;
 					echo "<br><br><br><br>";

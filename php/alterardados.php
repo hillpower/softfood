@@ -104,7 +104,7 @@ $row = mysqli_fetch_assoc($result);
 								<div class="form-group">
                                     <div class="col-md-10 col-sm-10"></div>
                                     <div class="col-md-1 col-sm-10"></div>
-                                    <div class="col-md-1 col-sm-10"><type="submit" class="btn btn-primary">   Atualizar  </button></div>
+                                    <div class="col-md-1 col-sm-10"><button type="submit" class="btn btn-primary">   Atualizar  </button></div>
                                     
 									
 									</div>
