@@ -63,15 +63,18 @@
                               	$preco = "'".$row["preco"]."'";
 								$tipoproduto_id = $row["tipoproduto_id"];
 								$imagem = "'".$row["imagem"]."'";
+								$precoFormatado = number_format($row["preco"], 2, ',', '.');
+								$precoFormatado2 = "'".$precoFormatado."'";
+								
                               	echo '
                               	<tr>
                               	    <td><a href="javascript:abrirImagem('.$imagem.');">'.$row["nome"].'</a></td>
                               	    <td>'.$row["descricao"].'</td>
 									<td>'.$row["tipo"].'</td>
-                              	    <td>'.$row["preco"].'</td>
+                              	    <td>R$ '.$precoFormatado.'</td>
                               
                               	    <td>
-                              	        <button class="btn btn-primary btn-xs" onclick="alterarProduto('.$id.','.$nome.','.$descricao.','.$preco.','.$tipoproduto_id.')"><i class="fa fa-pencil"></i></button>
+                              	        <button class="btn btn-primary btn-xs" onclick="alterarProduto('.$id.','.$nome.','.$descricao.','.$precoFormatado2.','.$tipoproduto_id.')"><i class="fa fa-pencil"></i></button>
                               	        <button class="btn btn-danger btn-xs" onclick="removerProduto('.$row["id"].')"><i class="fa fa-trash-o "></i></button>
                               	    </td>
                               	</tr>	
@@ -128,7 +131,7 @@
 							  <input type="text" name="descricao" id="uDescricao" placeholder="digite a descrição do produto" autocomplete="off" class="form-control placeholder-no-fix">
 							  </p>
 							  <p>Digite o preço abaixo.
-							  <input type="number" name="preco" id="uPreco" placeholder="valor do produto" autocomplete="off" class="form-control placeholder-no-fix">
+							  <input type="text" name="preco" id="uPreco" placeholder="valor do produto" autocomplete="off" class="form-control placeholder-no-fix js-currency">
 							  </p>    
 							  <input type="hidden" name="uId" id="uId" value=0 />
 							  <input type="hidden" name="uImg" id="uImg" value=0 />

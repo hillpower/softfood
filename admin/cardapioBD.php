@@ -8,6 +8,9 @@
 		$preco = $_GET['uPreco'];
 		$tipoproduto = $_GET['uTipoProduto'];
 		
+		$preco = str_replace(".", "", $preco);
+		$preco = str_replace(",", ".", $preco);
+		
 		$query = "INSERT INTO produto (tipoproduto_id, nome, descricao, preco) VALUES
 		($tipoproduto, '$nome', '$descricao', $preco)";
 		
@@ -28,6 +31,9 @@
 		$descricao = $_GET['uDescricao'];
 		$preco =($_GET['uPreco']);
 		$tipoproduto = $_GET['uTipoProduto'];
+		
+		$preco = str_replace(".", "", $preco);
+		$preco = str_replace(",", ".", $preco);
 		
 		$query = "UPDATE produto SET tipoproduto_id=$tipoproduto, nome='$nome', descricao='$descricao', preco=$preco WHERE id = $id";
 		

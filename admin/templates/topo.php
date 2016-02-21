@@ -4,10 +4,10 @@
 	
 	if(isset($_POST["uEmail"]) && isset($_POST["uSenha"])){
 		$email = $_POST["uEmail"];
-		$senha = $_POST["uSenha"];
-		//$senha = md5($_POST["uSenha"]);
+		//$senha = $_POST["uSenha"];
+		$senha = md5($_POST["uSenha"]);
 		
-		$query = "SELECT * FROM cliente
+		$query = "SELECT * FROM usuario
 					WHERE email = '$email' and '$senha'";
 		
 		$result = mysqli_query($link, $query);

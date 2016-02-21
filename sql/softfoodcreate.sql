@@ -35,7 +35,8 @@ CREATE TABLE produto (
   tipoproduto_id INTEGER UNSIGNED NOT NULL,
   nome VARCHAR(255) NULL,
   descricao VARCHAR(255) NULL,
-  preco DECIMAL NULL,
+  preco DECIMAL(10,2) NULL,
+  imagem VARCHAR(255) NULL,
   PRIMARY KEY(id),
   INDEX produto_FKIndex1(tipoproduto_id),
   FOREIGN KEY(tipoproduto_id)
@@ -50,7 +51,7 @@ CREATE TABLE pedido (
   cliente_id INTEGER UNSIGNED NOT NULL,
   numeropedido BIGINT NULL,
   datacompra DATETIME NULL,
-  total DECIMAL NULL,
+  total DECIMAL(10,2) NULL,
   obs TEXT NULL,
   PRIMARY KEY(id),
   INDEX pedido_FKIndex1(cliente_id),
@@ -70,7 +71,7 @@ CREATE TABLE itempedido (
   produto_id INTEGER UNSIGNED NOT NULL,
   pedido_id INTEGER UNSIGNED NOT NULL,
   quantidade INTEGER UNSIGNED NULL,
-  valor DECIMAL NULL,
+  valor DECIMAL(10,2) NULL,
   PRIMARY KEY(id),
   INDEX itempedido_FKIndex1(pedido_id),
   INDEX itempedido_FKIndex2(produto_id),
@@ -83,6 +84,3 @@ CREATE TABLE itempedido (
       ON DELETE NO ACTION
       ON UPDATE NO ACTION
 );
-
-ALTER TABLE `produto`
-	ADD COLUMN `imagem` VARCHAR(255) NULL DEFAULT NULL AFTER `preco`;

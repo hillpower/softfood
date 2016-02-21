@@ -24,4 +24,13 @@
     
     <script type="text/javascript" src="assets/js/gritter/js/jquery.gritter.js"></script>
     <script type="text/javascript" src="assets/js/gritter-conf.js"></script>
+	
+	<script src="assets/js/jquery.maskMoney.min.js"></script>
+	
+	<script>
+		$(function() {
+			$('.js-currency').maskMoney({decimal:',', thousands: '.', allowZero: true});
+		});
+	</script>
+	
 </body>
