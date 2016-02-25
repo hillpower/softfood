@@ -55,7 +55,13 @@
 												
 												
 												echo "<tr class='success'>
-												<td>".$row['nome']."</td>
+												<td>";?>
+												
+												<a class="btn" rel="popover" data-content='
+												<img src="../admin/fotos/<?php echo $row['imagem'];?>" width="170" height="130">' 
+												data-placement="right" data-html="true" data-trigger="hover" title=""><?php echo $row['nome'];?></a>
+												
+												<?php echo "</td>
 												<td>".$row['descricao']."</td>
 												<td>". 'R$ '. number_format($row['preco'],2,',','.')."</td>
 												<td><center><a href='carrinho.php?acao=add&id=".$row['id']."'> <button type='button' class='btn btn-primary'>Comprar</button></center></a></td>
@@ -181,7 +187,12 @@
 
             <script src="../js/jquery-2.1.1.js"></script>
             <script src="../js/bootstrap.js"></script>
+			
 
     </body>
-
+		<script>
+			$("[rel='popover']").each(function(i){ 
+                $(this).popover();
+			}); 
+	    </script>
 </html>
