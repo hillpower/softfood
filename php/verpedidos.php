@@ -58,7 +58,7 @@
 							  include "../php/conexao.php";
                               //$link = mysqli_connect("localhost", "root", "", "softfood");  
                               
-							  $query = "SELECT p.id, p.numeropedido, c.id, c.nome, p.datacompra, p.situacao_id, s.situacao, p.total 
+							  $query = "SELECT p.id as idp, p.numeropedido, c.id, c.nome, p.datacompra, p.situacao_id, s.situacao, p.total 
 										FROM pedido AS p
 										INNER JOIN cliente AS c ON (p.cliente_id = c.id)
 										INNER JOIN situacao AS s ON (p.situacao_id = s.id)
@@ -69,7 +69,7 @@
                               $result = mysqli_query($link, $query);
                               while($row = mysqli_fetch_assoc($result))
                               {
-								$pedido_id = $row["id"];
+								$pedido_id = $row["idp"];
                               	$numero_pedido = $row["numeropedido"];
                               	$cliente = $row["nome"];
                               	$data = $row["datacompra"];
@@ -132,7 +132,30 @@
 		
 		
         <div class="col-md-2"></div>
-           
+        
+		<!-- Modal -->
+		  <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+			  <div class="modal-dialog">
+				  <div class="modal-content">
+					  <div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						  <h4 class="modal-title">RESUMO DO PEDIDO</h4>
+					  </div>
+					  <div class="modal-body">
+						  <h4>
+							<span id="resumoTexto">Resumo do pedido.</span>
+						  </h4>	
+					  </div>
+					  <div class="modal-footer">
+						  <button data-dismiss="modal" class="btn btn-default" type="button" id="btFecharModal">Fechar</button>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+		<!-- modal -->
+		
+		<div id="wait" style="display:none;position:absolute;top:50%;left:50%;padding:2px;"><img src='../img/loading.gif' width="64" height="64" /></div>
+			 
         <div class="col-md-8">
             <?php
             include './footer.php';
@@ -160,5 +183,22 @@
 		
        
     </body>
+	<script>
 
+		function abrirPedido(valorId) {
+			$("#wait").css("display", "block");
+			$.ajax({
+				url: "../admin/pedidosBD.php",
+				data: {
+					uId : valorId,
+					uTipo: "resumo"
+				},
+				type: 'GET',
+				success: function(result) {
+					$("#wait").css("display", "none");
+					document.getElementById("resumoTexto").innerHTML = result;
+					$("#myModal").modal();
+				}});
+			}
+	</script>
 </html>
